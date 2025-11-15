@@ -1,0 +1,8 @@
+services:
+  nginx-rdp-proxy:
+    image: nginx:latest
+    container_name: nginx-rdp-proxy
+    network_mode: "host"        # usa a rede da máquina
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: always
