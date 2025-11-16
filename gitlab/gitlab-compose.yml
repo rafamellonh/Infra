@@ -15,6 +15,12 @@ services:
         # nginx['ssl_certificate'] = "/etc/gitlab/ssl/gitlab.crt"
         # nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/gitlab.key"
 
+        # Habilitar ou não cadastro
+        gitlab_rails['gitlab_signup_enabled'] = false
+
+        # Se não quiser confirmação por e-mail (para lab, sem SMTP)
+        gitlab_rails['gitlab_email_confirmation'] = false
+
     ports:
       - "80:80"
       - "443:443"   # pode deixar preparado pro futuro HTTPS
