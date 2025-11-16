@@ -22,7 +22,13 @@ git config --global --list # Lista apenas as configuracoes salvas no escopo glob
 git init # Inicializa um novo repositorio Git no diretorio atual
 ```
 
-
-```  ```
+``` git status ```
+``` 
+git branch test 
+git branch all
+git checkout test
+git push -u origin test
+git merge main 
+```
 ```  ```
 ```  ```
