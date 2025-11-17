@@ -1,0 +1,29 @@
+image: docker:latest
+
+variables:
+  DOCKER_HOST: unix:///var/run/docker.sock
+  DOCKER_TLS_CERTDIR: ""
+
+stages:
+  - build
+  - deploy
+
+criar_imagem:
+  stage: build
+  script:
+    - docker version
+    - docker build -t my-webserver ./app
+  tags:
+    - runner-lab-gitlab # Use o runner específico do GitLab
+
+executar_imagem:
+  stage: deploy
+  needs:
+    - criar_imagem
+  script:
+    #- docker run -d -p 8080:80 my-webserver
+    - docker run -d -p 8080:80 --name my-webserver-container my-webserver || docker start my-webserver-container
+
+  tags:
+    - runner-lab-gitlab # Use o runner específico do GitLab
+    #test

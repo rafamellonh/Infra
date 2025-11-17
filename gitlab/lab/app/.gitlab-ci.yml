@@ -1,0 +1,29 @@
+stages:
+  - test
+  - build
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+test_app:
+  stage: test
+  image: python:3.12-slim
+  before_script:
+    - pip install --no-cache-dir -r requirements.txt
+  script:
+    - python -m compileall app.py
+
+build_docker_image:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - docker version
+    - docker build -t lab-sample-app-quiz:ci .
+  only:
+    - main
+    - master

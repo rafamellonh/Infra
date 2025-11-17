@@ -1,7 +1,12 @@
-FROM httpd:latest
+FROM python:3.12-slim
 
-WORKDIR /usr/local/apache2/htdocs
+WORKDIR /app
 
-COPY . /usr/local/apache2/htdocs/
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8080
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz DevOps – GitLab & Docker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz DevOps</h1>
+        <p class="subtitle">
+            Responda às questões abaixo. A resposta fica oculta até você
+            <strong>selecionar uma opção</strong> e clicar em <strong>“Mostrar resposta”</strong>.
+        </p>
+
+        <div class="question" data-correct="b">
+            <h2>1) Para que serve o GitLab em um ambiente de TI?</h2>
+            <label><input type="radio" name="q1" value="a"> Apenas para hospedar sites estáticos.</label>
+            <label><input type="radio" name="q1" value="b"> Para gerenciar código-fonte, CI/CD, issues e colaboração em projetos.</label>
+            <label><input type="radio" name="q1" value="c"> Apenas como banco de dados.</label>
+            <button class="show-answer">Mostrar resposta</button>
+            <div class="answer hidden"></div>
+        </div>
+
+        <div class="question" data-correct="c">
+            <h2>2) O que é uma imagem Docker?</h2>
+            <label><input type="radio" name="q2" value="a"> Um serviço de DNS interno do GitLab.</label>
+            <label><input type="radio" name="q2" value="b"> Um backup do servidor inteiro.</label>
+            <label><input type="radio" name="q2" value="c"> Um pacote imutável com tudo que a aplicação precisa para rodar.</label>
+            <button class="show-answer">Mostrar resposta</button>
+            <div class="answer hidden"></div>
+        </div>
+
+        <div class="question" data-correct="a">
+            <h2>3) Qual comando sobe um container em primeiro plano a partir de uma imagem?</h2>
+            <label><input type="radio" name="q3" value="a"> <code>docker run</code></label>
+            <label><input type="radio" name="q3" value="b"> <code>docker build</code></label>
+            <label><input type="radio" name="q3" value="c"> <code>docker commit</code></label>
+            <button class="show-answer">Mostrar resposta</button>
+            <div class="answer hidden"></div>
+        </div>
+
+        <div class="question" data-correct="c">
+            <h2>4) Em um pipeline do GitLab CI, o que é um "job"?</h2>
+            <label><input type="radio" name="q4" value="a"> Uma VM física dedicada.</label>
+            <label><input type="radio" name="q4" value="b"> Um usuário do GitLab com permissões de admin.</label>
+            <label><input type="radio" name="q4" value="c"> Uma unidade de trabalho que executa um conjunto de scripts em uma stage.</label>
+            <button class="show-answer">Mostrar resposta</button>
+            <div class="answer hidden"></div>
+        </div>
+
+        <div class="question" data-correct="b">
+            <h2>5) Qual é a função principal do Dockerfile neste projeto de exemplo?</h2>
+            <label><input type="radio" name="q5" value="a"> Configurar o DNS do GitLab.</label>
+            <label><input type="radio" name="q5" value="b"> Descrever como construir a imagem da aplicação Flask.</label>
+            <label><input type="radio" name="q5" value="c"> Criar usuários no GitLab automaticamente.</label>
+            <button class="show-answer">Mostrar resposta</button>
+            <div class="answer hidden"></div>
+        </div>
+
+        <footer>
+            <p>Aplicação de exemplo – Flask + Docker + GitLab CI/CD.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
