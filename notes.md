@@ -1,5 +1,5 @@
  
-  sudo mount -t cifs //192.168.40.52/github/infra /data/infra -o username=rafael,password=#Rafa78965#,vers=3.0
+  sudo mount -t cifs //192.168.40.52/github/infra /data/infra -o username=rafael,password=#abc,123#,vers=3.0
 
 
   1️⃣ Verificar novo tamanho:
