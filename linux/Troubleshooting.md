@@ -1,4 +1,4 @@
-# Troubleshooting: Payara — "Port XXXXX is in use" ao iniciar instância
+# Troubleshooting:  — "Port XXXXX is in use" 
 
 `sudo ss -tulnp | grep <PORT>` — shows which process is listening on the port (PID, name).
 
