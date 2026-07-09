@@ -1,4 +1,4 @@
-# Comando `wc`
+## Comando `wc`
 
 ## Sintaxe
 
@@ -7,7 +7,7 @@ cat messages | wc -l
 3156
 ```
 
-# Comando `dd`
+## Comando `dd`
 
  `dd` é um comando para copiar/converter dados **bit a bit** entre um dispositivo/arquivo de origem e um de destino.
  
@@ -27,7 +27,7 @@ dd if=<origem> of=<destino> bs=<tamanho_bloco> status=progress
 ```
 
 
-# Comando `ln`
+## Comando `ln`
 
 # Hard link
 ```
@@ -43,7 +43,7 @@ ln -s /etc/hosts /home/rafael/hosts_symlink
 ls -li /etc/hosts /home/rafael/hosts_hardlink /home/rafael/hosts_symlink
 ```
 
-# Comando `tail`
+## Comando `tail`
 
 
 ​```bash
@@ -55,11 +55,11 @@ Acompanha o log em tempo real, mostrando novas linhas assim que são escritas �
 
 ## Combinações úteis
 
-​```bash
+​​```
 tail -n 50 arquivo.log          # últimas 50 linhas
 tail -f -n 100 arquivo.log      # começa mostrando as últimas 100, depois segue em tempo real
-journal
-
+journalctl -f                   # equivalente do tail -f para logs do systemd
+​```
 
 
 
