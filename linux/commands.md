@@ -43,7 +43,7 @@ ln -s /etc/hosts /home/rafael/hosts_symlink
 ls -li /etc/hosts /home/rafael/hosts_hardlink /home/rafael/hosts_symlink
 ```
 
-## Comando `tail`
+## Comando `tail`  (o comando HEAD é o contrario do tail)
 
 
 ​```bash
