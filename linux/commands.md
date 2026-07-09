@@ -25,3 +25,28 @@ dd if=<origem> of=<destino> bs=<tamanho_bloco> status=progress
 ```
  sudo dd if=/dev/sda of=/dev/sdb bs=4M status=progress
 ```
+
+
+# Comando `ln`
+
+# Hard link
+```
+ln /etc/hosts /home/rafael/hosts_hardlink
+```
+# Symlink
+```
+ln -s /etc/hosts /home/rafael/hosts_symlink
+```
+
+# Verificar
+```
+ls -li /etc/hosts /home/rafael/hosts_hardlink /home/rafael/hosts_symlink
+```
+
+
+
+
+
+
+
+
