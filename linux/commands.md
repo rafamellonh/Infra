@@ -43,7 +43,22 @@ ln -s /etc/hosts /home/rafael/hosts_symlink
 ls -li /etc/hosts /home/rafael/hosts_hardlink /home/rafael/hosts_symlink
 ```
 
+# Comando `tail`
 
+
+​```bash
+tail -f /var/log/syslog
+tail -f /var/log/nginx/access.log
+​```
+
+Acompanha o log em tempo real, mostrando novas linhas assim que são escritas — ótimo para monitorar serviços e debugar em produção.
+
+## Combinações úteis
+
+​```bash
+tail -n 50 arquivo.log          # últimas 50 linhas
+tail -f -n 100 arquivo.log      # começa mostrando as últimas 100, depois segue em tempo real
+journal
 
 
 
